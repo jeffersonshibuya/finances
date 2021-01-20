@@ -3,11 +3,13 @@ import { Form } from '@unform/web';
 import { FiLock, FiMail } from 'react-icons/fi';
 import * as Yup from 'yup';
 import { FormHandles } from '@unform/core';
+
+import { Container } from './styles';
+
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import { useToast } from '../../hooks/ToastContext';
 
-import { Container } from './styles';
 import getValidationErrors from '../../utils/getValidationErrors';
 
 const Dashboard: React.FC = () => {

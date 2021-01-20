@@ -3,19 +3,30 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import AppProvider from './hooks';
 
 import GlobalStyle from './styles/global';
+import { Container, Navigation, Main } from './styles/page';
+
 import Routes from './routes';
+import Menu from './components/Menu';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <>
       <AppProvider>
         <Router>
-          <Routes />
+          <Container>
+            <Navigation>
+              <Menu />
+            </Navigation>
+            <Main>
+              <p>Header</p>
+              <Routes />
+            </Main>
+          </Container>
         </Router>
       </AppProvider>
 
       <GlobalStyle />
-    </div>
+    </>
   );
 };
 
